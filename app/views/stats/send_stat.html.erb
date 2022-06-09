@@ -1,0 +1,36 @@
+<input type="text" name="batch_id" id="batch_id">
+
+<button id="btn_action" style="margin-left: 30px;" onclick="consultar()" class="btn btn-primary">Consultar</button>
+
+<script type="text/javascript">
+	function consultar(){
+    // $('#spinner').addClass('hm-spinner');
+    // $("#btn_cancelar_dos").prop("disabled",true)
+    console.log(":v")
+    var batch_id = $('#batch_id').val();
+    $.ajax({
+      type:"POST", 
+      url:"<%= url_for consultar_status_stats_path %>" , 
+      data: { batch_id: batch_id, "authenticity_token": "12"},
+      dataType: 'json',
+      success:function(result){
+        // $('#spinner').removeClass('hm-spinner');
+        // $("#btn_cancelar_dos").prop("disabled",false)
+        // if(result[0]==200){
+        //   alert("Orden Cancelada")
+        //   location.reload(true);
+        // }else{
+        //   alert(result[1])
+        // }
+        alert("SIMON")
+      },
+      error:function(error){
+        // $('#spinner').removeClass('hm-spinner');
+        // $("#btn_cancelar_dos").prop("disabled",false)
+        // console.log(error)
+        // alert(error.responseText)
+        alert("NEL")
+      }
+    });
+  }
+</script>
