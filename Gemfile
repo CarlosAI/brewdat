@@ -7,7 +7,7 @@ gem 'httparty'
 
 gem 'pg'
 
-#gem 'tiny_tds', '~> 2.1', '>= 2.1.5'
+gem 'tiny_tds', '~> 2.1', '>= 2.1.5'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
